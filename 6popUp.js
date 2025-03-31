@@ -16,8 +16,8 @@ else{
 
 
 // first one is alert()
-alert("hello there welcome to our website"); 
+alert("hello there welcome to our website"); //give no option 
 // second one is confiem()
-confirm("would you like us to navigate you");
+confirm("would you like us to navigate you");  //have option of ok or cancel
 //third one is prompt()
-prompt("hey can you enter you name please","user001");
+prompt("hey can you enter you name please","user001");  //have option to fill up
