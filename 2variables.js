@@ -1,4 +1,4 @@
-//                                                                     VARIABLE IN JS
+//                                                                                                     VARIABLE IN JS
 //In JavaScript, objects and functions are also variables.
 /* variables is used to store values
 there are four ways to declare a variable in js
@@ -20,6 +20,9 @@ When to Use var, let, or const?
 in general try not use the var variable and 
 Variables declared with var are function-scoped*/
 
+//they are three stages of variable 1.declaration 2.initialization 3.use
+
+//javascipt is a dynamically typed language which means you do not need to necessarily specify the type of data, it will automatically identify the data type and it will not throu any error
 
 
 // Variables declared with let are block-scoped
@@ -44,3 +47,39 @@ let longVariableName =
 let Firstname="NIKESH",  //here firstname and Firstname both are different variables because js is case-sensitive                  
 lastname="KUMAR";             
 console.log(Firstname,lastname);
+
+
+
+
+
+/*
+How do you declare a variable in JavaScript?
+
+What is the difference between var, let, and const?
+
+Can you change the value of a const variable?
+
+What will happen if you use a variable without declaring it?
+
+What is the default value of an uninitialized variable in JavaScript?
+
+What are the primitive data types in JavaScript?
+
+What is the difference between null and undefined?
+
+Is JavaScript a statically typed or dynamically typed language?
+
+What will be the output of typeof null?
+
+What happens when you add a number and a string in JavaScript?
+
+What is type coercion? Give an example.
+
+How can you manually convert a string to a number in JavaScript?
+
+What is the result of "5" - 3 in JavaScript?
+
+What is NaN in JavaScript, and how do you check if a value is NaN?
+
+How do you check the type of a variable in JavaScript?
+*/
