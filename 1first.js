@@ -118,4 +118,12 @@ console.log([z,q].join('\n'));
 console.log(`${z}
 ${q}`)
 
+
 console.log("hello jivan\nhello aahina");  //117 \n can put in between two string of expression inside the print statement to get a space in line
+
+console.log("---------------------------------------------------------7");
+//there is a concept of "use strict" in js 
+//like if we use this then the javascript will posses you to write clean and valid code by showing error if there is something found by js
+b = "help"; // no error as use strict is written after this 
+"use strict" // this only affect the code written after it
+a = "hello"; //error x is not declared
