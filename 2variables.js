@@ -1,5 +1,5 @@
 //                                                                                                     VARIABLE IN JS
-//In JavaScript, objects and functions are also variables.
+//In JavaScript, objects and functions are also variables. how and why
 /* variables is used to store values
 there are four ways to declare a variable in js
 1. automatically
@@ -83,3 +83,4 @@ What is NaN in JavaScript, and how do you check if a value is NaN?
 
 How do you check the type of a variable in JavaScript?
 */
+
