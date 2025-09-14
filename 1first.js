@@ -14,6 +14,7 @@ console.log("---------------------------------------------------------2");      
 /*Template Literals (`...`):
 Template literals are a way to include variables or expressions directly within a string.
 They are enclosed by backticks (`) instead of the usual quotation marks (' or ").
+Template literals are the broader concept — they allow multi-line strings, embedded expressions, and even tagged templates.
 
 String Interpolation with ${...}:
 Inside a template literal, ${...} is used for string interpolation, allowing you to insert variables or expressions directly into the string.
@@ -127,4 +128,5 @@ console.log("---------------------------------------------------------7");
 b = "help"; // no error as use strict is written after this 
 "use strict" // this only affect the code written after it
 a = "hello"; //error x is not declared
+
 
