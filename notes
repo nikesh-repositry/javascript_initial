@@ -1,1 +1,14 @@
 ---------------------------------------------------------------------NOTES OF THE javascript_initial REPOSITRY 
+========================1first.js
+Template literals are the broader concept — they allow multi-line strings, embedded expressions, and even tagged templates. explain this
+1. how to print in js
+2. how to do multiprint in js
+3. template literals and string interpolation
+4. comments
+5. multiple variables
+6. assignment operator and type coercion
+7. redeclaration and reassignment
+8. multiline print
+10. use strict
+11. string.raw
+12. tagged template literals//
