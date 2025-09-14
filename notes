@@ -11,3 +11,13 @@
 10. use strict
 11. string.raw
 12. tagged template literals//
+
+
+=========================2variables.js
+1.definitions
+2.ways to declare variables
+3.when to use which variable
+4.stages of variable 
+5.scope of variable
+6.declaration of multiple variables
+7.rules of variable declaration
