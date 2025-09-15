@@ -1,3 +1,4 @@
+//well when you add js file into html then it is better to link script after the html content inside the body Tag 
 console.log("hello world");//console.log() used to print anything in the js                                     PRINT IN JS
 //node D:\javascript_initials\js_essentials\first.js (this is the syntax to use when there is a code folder inside file inside a workspace)//
 //PS D:\javascript_initials> node js_essentials/first.js {here this is the command is used in my terminal}
