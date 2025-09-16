@@ -134,7 +134,7 @@ a = "hello"; //error x is not declared
 console.log("----------------------------------------------------------8")
 //It preserves escape sequences like \n, \t, \\, etc.
 //this is code example for string.raw  for printing the raw text inside the variable
-const k = String.raw`so thss is \n raw with no \${l}`
+const k = String.raw`so thss is \n raw with no \${l}`;
 const n = String.raw`so this is \n raw with no ${l}`;
 const m = `so this is \n raw with no ${l}`;
 console.log(k)
@@ -144,6 +144,7 @@ console.log(m)
 
 console.log("----------------------------------------------------------9")
 //tagged template literals 
+
 
 
 
