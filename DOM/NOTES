@@ -14,3 +14,9 @@ DOM represents the html document as tree    BOM represents the browser enviromen
 DOM main object is document                 BOM main object is window
 DOM manipulate page content/style           BOM control browser behavior 
 DOM allow js to operate with html & css     BOM interact with the browser window, tabs & navigator
+
+NODELIST is a collection of nodes(elements) extracted from a document
+NODELIST is like array but not a array
+NODELIST has two type live NODELIST and static NODELIST where in livenodelist it automatically updates the list whenever the DOM changes and in the staticnodelist it takes the snapshot of nodes at the time the query was made not updated with DOM changes.
+LIVENODELIST eg element.childNodes and STATICNODELIST eg document.querySelectorAll()
+SOMEWHERE LINE 28 TO LINE 44 the nodelist code with explanation for clearity
