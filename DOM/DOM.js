@@ -1,4 +1,5 @@
 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++BASIC+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 //HOW TO SELECT ANY HTML ELEMENT THROUGH JS===================================================================
 //using document.queryselector()
@@ -18,9 +19,26 @@ b.style.backgroundColor="green"
 
 //EVENT LISTENER IN JS==========================================================================================
 //syntax is: addEventListener(action,function)
-b.addEventListener('click',()=>{
+b.addEventListener('mouseover',()=>{
     b.innerHTML="yhh dude now this paragraph get changed again"
     b.style.color="orange"
     b.style.backgroundColor="pink"
     b.style.border="2px solid black"
 })
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+console.log("nodelist")
+
+let jj = document.querySelectorAll("#mylist li")
+console.log(jj)//this will print the nodelist in the console terminal
+
+jj.forEach(item => {                   //this is the foreach loop applied in because of nodelist where each element can be access through and perform operation
+    item.style.backgroundColor="blue"
+    item.style.color="red"
+});
+
+console.log(jj[1].childNodes) //this is how you can access any childnode of the nodelist
+
+const parent = document.getElementById('mylist') //41,42,43 these three line shows the execution of live nodelist 
+const children= parent.childNodes;   //i have not used the queryselectorall because childnode is not the property of the wholelist
+console.log(children) //The childNodes property is a feature of a single DOM element, not a collection of elements
+//also in the console the output contains the word "text" because the  whitespace between HTML tags is also considered a text node by the browser's Document Object Model (DOM).
