@@ -1,1 +1,16 @@
+                                                  =DEFINITON OF DOM=
+the dom is a programming interface that lets javascript interact with and manipulate the content, structure and style of a web page.
+actually when any browser loads a webpage, it turns the html into a tree like structure where each elements like <div>, <spin>,<form> etc becomes a node in that tree. and after that javascript can access element, change content, modify style, add and remove elements and other operation.
+                                                    ====BASICS====
+window object is the global object for the browser enviroment. 
+window object represents the browser window or tab that displays you web page.
+window object is like the master controller.
+window object holds everything like the page, the script, time, alerts and more.
+all global variables and functions become properties of window.
+we can reach the document via window.document and it includes 
+    [window.alert()] [window.setTimeout()] [window.location] [window.history] and more....
 
+DOM represents the html document as tree    BOM represents the browser enviroment outside html document
+DOM main object is document                 BOM main object is window
+DOM manipulate page content/style           BOM control browser behavior 
+DOM allow js to operate with html & css     BOM interact with the browser window, tabs & navigator
