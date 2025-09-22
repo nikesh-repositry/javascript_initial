@@ -5,8 +5,8 @@ actually when any browser loads a webpage, it turns the html into a tree like st
 
 
                                                     ====BASICS====
-Document object is available inside
-window object.
+Document object is available inside-
+window object which means window object is the global container for everything in a browser tab and the document object is a property of window that actually represents the html page. inshort document is a child of window.
 window object is the global object for the browser enviroment. 
 window object represents the browser window or tab that displays you web page.
 window object is like the master controller.
@@ -15,26 +15,50 @@ all global variables and functions become properties of window.
 we can reach the document via window.document and it includes 
     [window.alert()] [window.setTimeout()] [window.location] [window.history] and more....
 
+DOMNODE contains any item in the dom tree including element text comment 
+HTMLELEMENT contains specific type of node representing an HTML tag
+DOMNODE type is node
+HTMLELEMENT type is html element
+DOMNODE includes tags, text, comments,attributes etc
+HTMLELEMENT includes only  html tags like <h1><div><p>
+DOMNODE accessed via childNodes, firstChild, nextSibling
+HTMLELEMENT accessed via getElementByTagName, querySelector
+
 DOM represents the html document as tree    BOM represents the browser enviroment outside html document
 DOM main object is document                 BOM main object is window
 DOM manipulate page content/style           BOM control browser behavior 
 DOM allow js to operate with html & css     BOM interact with the browser window, tabs & navigator
 
 NODELIST is a collection of nodes(elements,texts,comments) extracted from a document
-NODELIST is like array but not a array
+NODELIST is like array but not a array.
+NODELIST is usually static(except childNodes).
 NODELIST has two type live NODELIST and static NODELIST where in livenodelist it automatically updates the list whenever the DOM changes and in the staticnodelist it takes the snapshot of nodes at the time the query was made not updated with DOM changes.
 LIVENODELIST eg element.childNodes and STATICNODELIST eg document.querySelectorAll()
-SOMEWHERE LINE 28 TO LINE 44 the nodelist code with explanation for clearity
-NODELIST can be convert into array
+SOMEWHERE LINE 28 TO LINE 44 in the js code file the nodelist code with explanation for clearity
+NODELIST can be convert into array by using Array.from().
+NODELIST is returned by querySelectorAll, childNodes
 
+HTMLCOLLECTION is a live collection of html elements returned by certain dom methods.
+HTMLCOLLECTION updates automatically when the dom changes.
+HTMLCOLLECTION is live-auto updates with dom changes unlike NODELIST.
+HTMLCOLLECTION cannot use array methods, foreach() loop.
+HTMLCOLLECTION cannot change style directly but can using loop like for, for..of
+HTMLCOLLECTION is returned by getElementByTagName, getElementByClassName
+HTMLCOLLECTION convert to array with Array.from()
 
 
                                                   =SELECTION OF HTML=
 the dom is a tree like structure that represents all elements of your HTML document and in js we can access, select and manipulate these elements using different seletion methods
-1. getElementById()
-2. getElementsByTagName()
-3. getElementsByClassName()
-4. querySelector()
-5. querySelectorAll()
+1. getElementById() returns single element, HTML ELEMENT , not a collection
+2. getElementsByTagName() returns multiple html elements, HTML COLLECTION, it is live
+3. getElementsByClassName() returns multiple html elements, HTML COLLECTION, it is live
+4. querySelector() returns first matching element, return ELEMENT or null
+5. querySelectorAll() returns all matching nodes, NODELIST, static, not a collection
+
                                                    1.getElementById()
+this method is used to select a single html element using its id attribute.
+the id must be unique in html and this method always returns one element only.
+it has the fastest performance
+it does not accepts css selectors llike #,.,tag
+
 
