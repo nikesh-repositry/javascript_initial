@@ -79,3 +79,15 @@ it returns a single element
 it is static
 it has a medium performance
 it is a modern and powerful selector
+full css selector
+check out the code of it in js file 
+document.querySelector can be implemented as using ID, class, tag, attribute, nested, pseudo-class
+                                                  5.querySeletorAll()
+this method is the collection version of querySelector 
+it returns all elements matching a css selector
+it returns a static nodelist of element object
+it  has a medium performance
+its collection type is nodelist(includes only elements, no text/comments)
+full css selector
+check out the  code of it in js file
+
