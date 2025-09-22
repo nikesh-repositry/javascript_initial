@@ -59,6 +59,23 @@ the dom is a tree like structure that represents all elements of your HTML docum
 this method is used to select a single html element using its id attribute.
 the id must be unique in html and this method always returns one element only.
 it has the fastest performance
-it does not accepts css selectors llike #,.,tag
-
-
+it does not accepts css selectors like #,.,tag
+                                                 2.getElementByTagName()
+this method selects all elements with a given html tag name.
+it returns an HTMLCOLLECTION array like object not a real array.
+it is live
+it has fast performance
+no css selector
+                                                 3.getElementByClassName()
+this method selects all elements with a specific class name
+it returns an HTMLCOLLECTION
+it is live
+it has fast performance
+no css selector
+                                                   4.querySelector()
+this method selects the first matching element based on css selector
+it returns an element object and null if no match
+it returns a single element
+it is static
+it has a medium performance
+it is a modern and powerful selector
