@@ -26,6 +26,11 @@ b.addEventListener('mouseover',()=>{
     b.style.border="2px solid black"
 })
 console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+
+
+//                                                             NODELIST
+
 console.log("nodelist")
 
 let jj = document.querySelectorAll("#mylist li")
@@ -42,3 +47,40 @@ const parent = document.getElementById('mylist') //41,42,43 these three line sho
 const children= parent.childNodes;   //i have not used the queryselectorall because childnode is not the property of the wholelist
 console.log(children) //The childNodes property is a feature of a single DOM element, not a collection of elements
 //also in the console the output contains the word "text" because the  whitespace between HTML tags is also considered a text node by the browser's Document Object Model (DOM).
+//nodelist can be convert into a array
+
+
+
+
+
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+//                                                        SELECTION OF HTML
+//getElementId()
+const aa = document.getElementById("first")
+console.log(aa)
+const a2 = document.getElementById("second")
+console.log(a2)
+//getElementByTagName()
+const a3 = document.getElementsByTagName('h2')
+console.log(a3)      
+a3[0].style.backgroundColor='yellow'
+console.log(a3[2].innerText) 
+//getElementByClassName()
+const a4 = document.getElementsByClassName('myclass')
+console.log(a4)   
+Array.from(a4).forEach(Element=>Element.style.backgroundColor='purple')  //here the htmlcollection first gets convert into an array then we applied the foreach loop otherwise we can do it via simple loop
+//this foreach by converting into array can be done same for getelementbytagname
+//querySelector()
+const a5 = document.querySelector("input[type='email']")
+console.log(a5)
+a5.style.border="2px solid orange"
+//document.querySelector can be implemented as using ID, class, tag, attribute, nested, pseudo-class
+//documen.querySelectorAll()
+const a6 = document.querySelectorAll(".mymy")
+console.log(a6)
+if(a6.length = 2){
+    a6[2].style.backgroundColor="green"
+}
+const a7 = document.querySelectorAll(".mymy")[1]
+console.log(a7)
+a7.style.backgroundColor='orange'
