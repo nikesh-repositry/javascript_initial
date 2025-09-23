@@ -101,6 +101,14 @@ like changing content, structure, attributes
 2.NODENAME    = this is a read only name of the nodes in uppercase for element nodes
               = it works for all node types (element, text, comment)
               = getter only, broader than tagname, ideal for mixed node types
+3.INNERTEXT   = this returns or set the visible text inside an element
+              = it is slower than TEXTCONTENT
+              = it skip the  text which is not visible for eg where display: none style is used
+              = non standard but supported in all major browser
+4.TEXTCONTENT = this returns or set the text content of an element and its descendants 
+              = it does not consider css styles i.e. hidden text is included
+              = faster than innertext and standard
+              = it preserves whitespace exactly
               
 
 
