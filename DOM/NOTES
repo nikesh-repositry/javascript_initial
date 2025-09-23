@@ -95,10 +95,13 @@ check out the  code of it in js file
                                                    ==MANIPULATING THE HTML==
 this allow you to dynamically change the  content, structure and behavior of your web pages
 like changing content, structure, attributes
-1.TAGNAME = this is a read only property of element nodes that returns the html tag name like "DIV" in uppercase.
-          = this only available on element node not text or comment nodes
-          = it is a case insensitive in html but always uppercase in output
-
+1.TAGNAME     = this is a read only property of element nodes that returns the html tag name like "DIV" in uppercase.
+              = this only available on element node not text or comment nodes
+              = it is a case insensitive in html but always uppercase in output
+2.NODENAME    = this is a read only name of the nodes in uppercase for element nodes
+              = it works for all node types (element, text, comment)
+              = getter only, broader than tagname, ideal for mixed node types
+              
 
 
 
