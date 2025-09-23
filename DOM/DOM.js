@@ -108,4 +108,21 @@ while(child){
     console.log(child.nodeName);
     child = child.nextSibling;
 }
-
+//                                     innerText
+//it return and set the visible content of the element
+const a10 = document.getElementById('mydiv5')
+console.log(a10.innerText)
+a10.innerText="new visible content"
+console.log(a10.innerText) //setting up the new text in the element 
+//                                      textcontent
+//it sets and gets all the text content
+const a11 = window.document.getElementById('mydiv6')
+console.log(a11.textContent) //displaying all content
+a11.textContent="this is the new content "
+console.log(a11.textContent)
+//                                      innerhtml
+//
+const a12 = window.document.getElementById('mydiv7')
+console.log(a12.innerHTML)
+a12.innerHTML= '<ul><li>item no 1</li><li>item no 2</li></ul>'
+console.log(a12.innerHTML)
