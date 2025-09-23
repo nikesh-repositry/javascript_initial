@@ -84,3 +84,28 @@ if(a6.length = 2){
 const a7 = document.querySelectorAll(".mymy")[1]
 console.log(a7)
 a7.style.backgroundColor='orange'
+
+
+
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+//                                    manipulating the html
+//                                    tagname
+//it just returns the tagname of the element 
+const a8 = document.getElementById("mybutton")
+console.log(a8.tagName)
+const allelem  = document.body.children;
+for(let child of allelem){
+    if(child.tagName==="BUTTON"){
+        console.log("found the button",child.id)
+    }
+}
+//                                     nodename
+//it just return the nodename of the element nodes all types
+const a9 = document.getElementById('myhead2')
+console.log(a9.nodeName)
+let child = a9.firstChild;
+while(child){
+    console.log(child.nodeName);
+    child = child.nextSibling;
+}
+
