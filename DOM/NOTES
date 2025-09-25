@@ -94,20 +94,25 @@ check out the  code of it in js file
                                                    ==MANIPULATING THE HTML==
 this allow you to dynamically change the  content, structure and behavior of your web pages
 like changing content, structure, attributes
+
 1.TAGNAME     = this is a read only property of element nodes that returns the html tag name like "DIV" in uppercase.
               = this only available on element node not text or comment nodes
               = it is a case insensitive in html but always uppercase in output
+
 2.NODENAME    = this is a read only name of the nodes in uppercase for element nodes
               = it works for all node types (element, text, comment)
               = getter only, broader than tagname, ideal for mixed node types
+
 3.INNERTEXT   = this returns or set the visible text inside an element with formatting
               = it is slower than TEXTCONTENT
               = it skip the  text which is not visible for eg where display: none style is used
               = non standard but supported in all major browser
+
 4.TEXTCONTENT = this returns or set the text content of an element and its descendants without formatting 
               = it does not consider css styles i.e. hidden text is included
               = faster than innertext and it is standard
               = it preserves whitespace exactly
+
 5.INNERHTML   = this returns html content (tags+text) inside the element without formatting
               = it allow you to add/change multiple child elements at once
               = it can insert tag, script etc
