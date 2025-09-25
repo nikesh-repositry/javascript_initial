@@ -47,14 +47,13 @@ HTMLCOLLECTION is returned by getElementByTagName, getElementByClassName
 HTMLCOLLECTION convert to array with Array.from()
 
 
-                                                  =SELECTION OF HTML=
+                                                  ==SELECTION OF HTML==
 the dom is a tree like structure that represents all elements of your HTML document and in js we can access, select and manipulate these elements using different seletion methods
 1. getElementById() returns single element, HTML ELEMENT , not a collection
 2. getElementsByTagName() returns multiple html elements, HTML COLLECTION, it is live
 3. getElementsByClassName() returns multiple html elements, HTML COLLECTION, it is live
 4. querySelector() returns first matching element, return ELEMENT or null
 5. querySelectorAll() returns all matching nodes, NODELIST, static, not a collection
-
                                                    1.getElementById()
 this method is used to select a single html element using its id attribute.
 the id must be unique in html and this method always returns one element only.
@@ -107,12 +106,20 @@ like changing content, structure, attributes
               = non standard but supported in all major browser
 4.TEXTCONTENT = this returns or set the text content of an element and its descendants without formatting 
               = it does not consider css styles i.e. hidden text is included
-              = faster than innertext and standard
+              = faster than innertext and it is standard
               = it preserves whitespace exactly
 5.INNERHTML   = this returns html content (tags+text) inside the element without formatting
               = it allow you to add/change multiple child elements at once
               = it can insert tag, script etc
               = powerful but risky
+
+                                                ==INSERTION/ADDITION OF ELEMENTS==
+when working with js and the dom we often need to add new elements or html content dynamically. this is  called  dom manipulation.
+>two major steps are followed to add element 
+STEP1:
+before you can insert anything you need to create it and for that we typically use: .createElement("")
+
+
               
 
 
