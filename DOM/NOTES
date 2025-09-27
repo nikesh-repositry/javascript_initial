@@ -171,6 +171,58 @@ These are part of the core DOM API in javascript, enabling dynamic updates to th
 5. parent.removeChild(child): it removes the specified child from the parent
                             : it returns the removed node
                             : works with node references(you cannot pass a string)
+
+
+                                                                ==ATTRIBUTES==
+attributes are additional information stored inside HTML elements.
+they appear as name="value" pairs
+there is a standard and custom attributes
+accessing and setting attributes is slightly  slower than properties due to string operations and dom updates
+we may want to read update or add remove attributes dynamically using js like changing image source, toggling classes, controlling links 
+1. element.getAttribute(attr) = it fetches the current value of the given attribute
+                              = it return null if the attribute does not exist
+                              = it return type is string or null
+                              = it return attribute value for boolean attributes
+2. element.setAttribute(attr,value) = it adds or updates an attribute with a new value
+                                    = it the attribute does not exist, it creates it.
+                                    = it return type is undefined i.e. no return
+3. element.attributes = a namedNodeMap array like of all attributes as attr objects, each has name and value properties
+4. element.hasAttributes(attrName) = it returns true if the attribute exists, false otherwise.
+5. element.removeAttribute(attrName) = it removes the specified attribute. no effect if the attribute does not exist.
+6. element.toggleAttribute(attrName, [force]) = toggles a boolean attribute
+                                              = it adds if absent, removes if present
+                                              = the optional force(boolean) sets it explicitly
+
+
+
+                                                            ==MANIPULATING THE CSS==
+while working with javascript we can dynamically change an element appearance. there are multiple ways to manipulate css in the dom
+                                                            1. using attribute method
+=we can use setattribute() and getattribute() to modify the style attribute directly as a string
+=element.getAttribute('style') returns the inline style string or null if absent. rarely used nowdays because of element.style
+=element.setAttribute('style',value) sets the entire inline style string, overwriting existing inline styles
+=simple for buld inline style changes and it works with any valid css string
+=it overwrites existing inline styles and it is harder to manipulate individual properties
+                                                                  2. using style
+=each element has a style object that allows you to set individual css properties as js properties
+=best for adding or changing individial styles dynamically without affecting other styles
+=it only affects inline styles not stylesheet rules
+                                                             3. using cssText property
+=it allows you to set multiple css rules at once, similar to writing inline style in html
+=slightly cleaner than setAttribute method and convenient for bulk inline style changes
+=it is destructive to existing inline styles
+                                                             4. using className property
+=you can change the class attribute of an element completely by setting className
+=it applies predefined css classes from stylesheets and resetting all classes at once
+=it is destructive i.e. overwrites all existing classes
+                                           5. using classList property: add(),remove(),toggle(),contains()
+=the best modern way to add/remove/toggle individual classes without affecting others
+=it has available methods like add,remove,toggle,contains
+=it is non destructive i.e. only affects specified classes
+=works with stylesheet-defined classes, not inline styles and it is safer
+🌟priority== element.classList>> element.ClassName>> element.style.property>> element.style.cssText>> setAttribute("style","...")
+
+
  
 
 
