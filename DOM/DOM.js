@@ -115,14 +115,46 @@ console.log(a10.innerText)
 a10.innerText="new visible content"
 console.log(a10.innerText) //setting up the new text in the element 
 //                                      textcontent
-//it sets and gets all the text content
+//it sets and gets all the text plain content. 
 const a11 = window.document.getElementById('mydiv6')
 console.log(a11.textContent) //displaying all content
 a11.textContent="this is the new content "
 console.log(a11.textContent)
 //                                      innerhtml
+//it set and gets html content
+const a13 = window.document.getElementById('mydiv7')
+console.log(a13.innerHTML)
+a13.innerHTML= '<ul><li>item no 1</li><li>item no 2</li></ul>'
+console.log(a13.innerHTML)
+//                                    example for clearity
+const a12 = document.querySelector("#myp")
+console.log("innertext="+a12.innerText)
+console.log("textcontent="+a12.textContent)
+console.log("nodename="+a12.nodeName)
+console.log("innerhtml="+a12.innerHTML)
+console.log("tagname="+a12.tagName)
+
+//                               INSERTION/ADDITION OF ELEMENT
+//STEP = 1 is creating the element which would be inserted
+const a15 = document.createElement("li")
+      a16 = document.createElement("li")
+      a17 = document.createElement("li")
+      a18 = document.createElement("li")
+      a19 = document.createElement("li")
+a15.textContent="node.append(elem)"
+a16.textContent="node.prepend(elem)"
+a17.textContent="node.before(elem)"
+a18.textContent="node.after(elem)"
+a19.textContent="node.insertAdjacentElement(position,elem)"      
+//STEP = 2 is to use the method to append the created element according to the requirement
+//                                    1.node.append(elem)
+document.getElementById("myol1").append(a15)
+// document.querySelector("#myol1").append(a15)
+//                                    2.node.prepend(elem)
+document.getElementById("myol1").prepend(a16)
+//                                    3.node.before(elem)
+document.getElementById("myol1").before(a17)
+//                                    4.node.after(elem)
+document.getElementById("myol1").after(a18)
 //
-const a12 = window.document.getElementById('mydiv7')
-console.log(a12.innerHTML)
-a12.innerHTML= '<ul><li>item no 1</li><li>item no 2</li></ul>'
-console.log(a12.innerHTML)
+document.getElementById("myol1").insertAdjacentElement("afterbegin",a19)
