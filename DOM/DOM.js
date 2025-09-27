@@ -134,6 +134,8 @@ console.log("nodename="+a12.nodeName)
 console.log("innerhtml="+a12.innerHTML)
 console.log("tagname="+a12.tagName)
 
+
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 //                               INSERTION/ADDITION OF ELEMENT
 //STEP = 1 is creating the element which would be inserted
 const a15 = document.createElement("li")
@@ -161,6 +163,8 @@ document.getElementById("myol1").insertAdjacentElement("afterbegin",a19)
 //                                    6.node.remove()
 document.getElementById("my1").remove()
 
+
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 //                                   PARENT RELATED DOM METHODS                           
 //these are the parent related dom methods which are used to manipulate the children of the parent node specific
 //                                    1.node.parentNode
@@ -178,7 +182,7 @@ container.appendChild(old1) /* here in this code if i put myp1 instead of old1 t
                              the dom tree but still in the memory so this is like 
                              trying to append a non existing node to fix it i used 
                              the old1 reference which is still a vaild node object 
-                             as you are not querying the dom again instead you are 
+                            as you are not querying the dom again instead you are 
                             reusing the reference. the dom does not care that the 
                             node was removed earlier - it will happily reinsert it 
                             but if the old1 no longer available no reference of p 
@@ -189,4 +193,28 @@ new2.textContent="this is also a new paragraph C for insertBefore example and pa
 container.insertBefore(new2,old1) 
 //                                    5.parent.removeChild(child) 
 const p1 = document.getElementById("myp2")
-container.removeChild(myp2)                       
+container.removeChild(myp2)                     
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+//                                      ATTRIBUTES
+console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+//                                       MANIPULATING OF CSS
+//1. using setAttribute()
+const a20 = document.getElementById("mydiv9")
+a20.setAttribute("style","width:100px; height:100px; color:black; background-color:violet; ")
+console.log(a20.getAttribute("style"))
+//2. using .style property
+const a21 = document.getElementById("mydiv10")
+a21.style.color="white"
+a21.style.width="100px"
+a21.style.height="100px"
+a21.style.backgroundColor="blue"
+//3. using .cssText property
+const a22 = document.getElementById("mydiv11")
+a22.style.cssText="color=black; width:100px; height:100px; background-Color:green"
+//4. using .className property
+const a23 = document.getElementById("mydiv12")
+a23.className="orangebox"
+//5. using .classList property
+const a24 = document.getElementById("mydiv13")
+a24.classList.toggle("orangebox")
+console.log(a24.classList.contains("orangebox"))
