@@ -156,5 +156,37 @@ document.getElementById("myol1").prepend(a16)
 document.getElementById("myol1").before(a17)
 //                                    4.node.after(elem)
 document.getElementById("myol1").after(a18)
-//
+//                                    5.node.insertAdjacentElement(position,elem)
 document.getElementById("myol1").insertAdjacentElement("afterbegin",a19)
+//                                    6.node.remove()
+document.getElementById("my1").remove()
+
+//                                   PARENT RELATED DOM METHODS                           
+//these are the parent related dom methods which are used to manipulate the children of the parent node specific
+//                                    1.node.parentNode
+console.log(a19.parentNode)// this method is used for debugging by inspecting, dev tools show live DOM
+//                                    2.parent.replaceChild(newChild, oldChild)
+const container = document.getElementById("mydiv8")
+const new1 = document.createElement("p")
+new1.textContent="this is a new para B by using replaceChild B replace A"
+const old1 = document.getElementById("myp1")
+container.replaceChild(new1,old1)
+//                                    3.parent.appendChild(child)
+const myp1 = document.getElementById("myp1")
+container.appendChild(old1) /* here in this code if i put myp1 instead of old1 then 
+                             it will throw typeerror because the myp1 removed from 
+                             the dom tree but still in the memory so this is like 
+                             trying to append a non existing node to fix it i used 
+                             the old1 reference which is still a vaild node object 
+                             as you are not querying the dom again instead you are 
+                            reusing the reference. the dom does not care that the 
+                            node was removed earlier - it will happily reinsert it 
+                            but if the old1 no longer available no reference of p 
+                            would be available in the memory then it cannot be restored*/ 
+//                                    4.parent.insertBefore(newNode, referenceNode) 
+const new2 = document.createElement("p") 
+new2.textContent="this is also a new paragraph C for insertBefore example and para A is eg of appendchild" 
+container.insertBefore(new2,old1) 
+//                                    5.parent.removeChild(child) 
+const p1 = document.getElementById("myp2")
+container.removeChild(myp2)                       
