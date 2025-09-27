@@ -131,8 +131,8 @@ once you have the element there are several ways to insert it relative to other 
 3. node.after(elem) : adds after the node (outside)
 4. node.before(elem) : adds before the node (outside)
 5. node.inserAdjacentElement(position, elem) : positon can be “beforebegin”, “afterbegin”, “beforeend”, “afterend”
-and all of it moves the existing element
-all are non-destructive and reuses the same node
+🌟and all of it moves the existing element
+🌟all are non-destructive and reuses the same node which means that if you are appending is already part of another parent, calling append() will move it instead of cloning or deleting it.
 1. node.append(elem) = adds one or more element/text nodes at the end of the selected node(inside it)
                      = it is non-destructive means that if you are appending is already part of another parent, calling append() will move it instead of cloning or deleting it.
                      = it resuses the same node
@@ -141,12 +141,36 @@ all are non-destructive and reuses the same node
 4. node.after(elem)  = adds one or more element/text nodes immediately before the node as previous siblings(outside it)
 5. node.insertAdjacentElement(position,elem) = insert a single element at the specified position relative to the node.
                                              = positions are string
-                                             ="beforebegin": Before the node (previous sibling).
+                                             ="beforebegin": Before the node (previous sibling)(outside).
                                              ="afterbegin": Inside the node, as first child.
                                              ="beforeend": Inside the node, as last child.
-                                             ="afterend": After the node (next sibling).
+                                             ="afterend": After the node (next sibling)(outside).
                                              =E.g., node.insertAdjacentElement('afterend', elem);. Older method, but precise.
+6.node.remove() : removes the node from its parent 
+                : it is modern and simple; no return value
+                : node.replaceWith() can remove by replacing with nothing but better to use remove().
 
+
+                                                        ==PARENT NODE RELATED CONCEPT==
+In DOM every node such as elements, text nodes, comments etc can have a hierarchical relationship with other nodes. The parentnode property and related methods allow you to navigate and manipulate this hierarchy, specially focusing on parent-child relationships.
+These are part of the core DOM API in javascript, enabling dynamic updates to the page structure without reloading.
+1. node.parentNode: it returns the immediate parent of a given node in the DOM tree
+                  : this is a read only property
+                  : it returns type is a node object which could be a element(<div>) or the document object(<html>)
+                  : 🌟parentNode vs parentElement the parentNode works with any type of node, including text, comments, document nodes but the parentElement works with only HTML element which can be get by document.getElementById("")
+🌟now below methods can be use on a parent node to manipulate its children 
+🌟these all are node only methods 
+🌟and also all of the below methods are destructive in the sense that they modify the existing DOM tree by removing or replacing a node from its original position. actually non cloning, it is unlike of addition of element the topic is just before it.
+2. parent.replaceChild(newChild, oldChild): replaces an existing child node from the dom tree with a new node, meaning the old child is no longer part of the visible document structure and it completely remove from the memory if there no other refernces of it like variable of something in your code.
+                                          : works only with node objects(not strings) which means you must pass actual DOM nodes(like elements or text nodes) to replaceChild() you cannot pass "hello" or "<p>hello<p>" as a string it wont work.
+3. parent.appendChild(child): it adds a child node at the end of the parent children list
+                            : it returns the appended node
+                            : it works only with node objects no direct string support
+4. parent.insertBefore(newNode, referenceNode): it insert a new node before a specified reference child. if referenceNode is null, it acts like appendChild (adds to end)
+                                              : it returns the inserted newNode
+5. parent.removeChild(child): it removes the specified child from the parent
+                            : it returns the removed node
+                            : works with node references(you cannot pass a string)
  
 
 
