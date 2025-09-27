@@ -131,9 +131,23 @@ once you have the element there are several ways to insert it relative to other 
 3. node.after(elem) : adds after the node (outside)
 4. node.before(elem) : adds before the node (outside)
 5. node.inserAdjacentElement(position, elem) : positon can be “beforebegin”, “afterbegin”, “beforeend”, “afterend”
-1. node.append(elem) = adds an element at the end of the selected node(inside it)
-                     = 
-              
+and all of it moves the existing element
+all are non-destructive and reuses the same node
+1. node.append(elem) = adds one or more element/text nodes at the end of the selected node(inside it)
+                     = it is non-destructive means that if you are appending is already part of another parent, calling append() will move it instead of cloning or deleting it.
+                     = it resuses the same node
+2. node.prepend(elem)= adds one or more element/text nodes at the start of the selected node(inside it)
+3. node.before(elem) = adds one or more element/text nodes immediately after the node as previous sibling(outside it)
+4. node.after(elem)  = adds one or more element/text nodes immediately before the node as previous siblings(outside it)
+5. node.insertAdjacentElement(position,elem) = insert a single element at the specified position relative to the node.
+                                             = positions are string
+                                             ="beforebegin": Before the node (previous sibling).
+                                             ="afterbegin": Inside the node, as first child.
+                                             ="beforeend": Inside the node, as last child.
+                                             ="afterend": After the node (next sibling).
+                                             =E.g., node.insertAdjacentElement('afterend', elem);. Older method, but precise.
+
+ 
 
 
 
