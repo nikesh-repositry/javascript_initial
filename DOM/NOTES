@@ -89,6 +89,7 @@ it  has a medium performance
 its collection type is nodelist(includes only elements, no text/comments)
 full css selector
 check out the  code of it in js file
+🌟🌟TIP=== querySelector()>> querySelectorAll()>> getElementById()>> getElementByClassName()>> getElementByTagName()
 
 
                                                    ==MANIPULATING THE HTML==
@@ -123,8 +124,15 @@ when working with js and the dom we often need to add new elements or html conte
 >two major steps are followed to add element 
 STEP1:
 before you can insert anything you need to create it and for that we typically use: .createElement("")
-
-
+STEP2:
+once you have the element there are several ways to insert it relative to other node
+1. node.append(elem) : adds at the end of node (inside)
+2. node.prepend(elem) : adds at the start of node (inside)
+3. node.after(elem) : adds after the node (outside)
+4. node.before(elem) : adds before the node (outside)
+5. node.inserAdjacentElement(position, elem) : positon can be “beforebegin”, “afterbegin”, “beforeend”, “afterend”
+1. node.append(elem) = adds an element at the end of the selected node(inside it)
+                     = 
               
 
 
