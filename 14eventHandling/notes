@@ -1,1 +1,44 @@
+                                 ========SO THIS IS THE NOTE FOR EVENTS CONCEPTS========
+                                       +++++++++++++EVENT HANDLING+++++++++++++
+Definition:: an event in js is anything that happens in the browser that your code can respond to for eg. clicking a button, typing on the keyboard, scrolling the page, submitting the form and many more others.
+event handling is a fundamental concept in js particulary in web dev where it allows scipts to respond to user interactions or browser triggered occurrences.
+event handling involves : detecting an event
+                        : attaching a handler
+                        : processing the event
+event handling types : mouse events : click
+                                    : dblclick
+                                    : contextmenu and many more
+                     : keyboard events : keydown
+                                       : keypress
+                                       : keyup
+                     : form events : submit
+                                   : focus
+                                   : blur
+how to handle events??
+there are three ways 
+1. inline html handlers
+2. dom property handlers
+3. addEventListener()
+                                                  1. inline html handlers
+=here you write javascipt directly inside the html tag
+=it is very simple and quick
+=good for small, one time events
+=it is a bad practice in large project because it mix html and js
+=it is hard to maintain for big application
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
