@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            padding: 20px;
+            margin: 10px;
+        }
         .yellowBG{
             background-color: yellow;
         }
@@ -12,9 +16,14 @@
 </head>
 <body>
     <h1 style="background-color: palegreen;">EVENT HANDLING ++++++++++++++++++++++++++++++</h1>
-    <button onclick="fun1()" style="position: absolute; left: 50%; ">click me for alert</button>
-    <button ondblclick="fun2()" style="position:absolute ; right: 16%; top: 12%;">change the color by clicking on me double times from yellow to white and white to yellow</button>
+    <button onclick="fun1()" >click me for alert</button><br>
+    <button ondblclick="fun2()" >change the color by clicking on me double times from yellow to white and white to yellow</button>
     
+    <div id="mydiv1" style="width: 50px; height: 50px; background-color: fuchsia;">mouse over me</div>
+
+    <div id="mydiv2" style="width: 150px; height:150px; border-radius: 50%; border: 20px solid black;"></div>
+    <button id="but1" style="margin-right: 80px;"> ON </button>
+    <button id="but2"> OFF </button>
     <script src="14event.js"></script>
 </body>
 </html>
