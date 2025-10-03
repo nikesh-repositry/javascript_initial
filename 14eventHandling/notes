@@ -25,6 +25,21 @@ there are three ways
 =good for small, one time events
 =it is a bad practice in large project because it mix html and js
 =it is hard to maintain for big application
+=cant easily attach multiple handlers to the same events
+=secuity risks in dynamic html
+=potential of global scare pollution 
+                                                  2. dom property handlers
+=the dom property handler involves assigning a function directly to an element event property via js.
+=here you selectt the element using the dom api like getelementbyid and set the property like onclick
+=only one handler per event type per element (assigning a new one overwrites the old)
+=keeps js separate from html and easy to understand
+                                                  3. addEventListerner() 
+=this method is modern, recommended approach for attaching event handlers.
+=it's part of the dom level 2 events api and allow flexible, non overwritten attachments
+=supports multiple handlers without overwriting to the same element
+=event delegation friendly
+=it is standard and cross browser
+=can remove listeners using removeEventListener()
 
 
 
