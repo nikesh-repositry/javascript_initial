@@ -41,6 +41,27 @@ there are three ways
 =it is standard and cross browser
 =can remove listeners using removeEventListener()
 
+                                          ++++++++++++++++++EVENT OBJECT+++++++++++++++++++
+an event object is a data structure that holds information about a specific event that allows developers to access properties and methods related to that event.
+when an event happens like a user cliking a button or anything, the browser or a program creates an event object.
+this object is then passed to the function that is designed to handle that event.
+=-= an event object typically has several important properties that provide details about the event
+ -= property        |description
+ -= type             the type of event, eg click, keydown
+ -= key/keycode      in keyboard events, this tells you which key was pressed eg you pressed Enter retuns Enter          
+ -= target           the dom element that triggered the event, eg cliking the span inside the button target is span
+ -= currentTarget    the element the event listener is attached to, eg listener is on button so currentTarget is button
+ -= clientX clientY  these give the horizontal and vertical coordinates of the mouse pointer when the event happened relative to the browser window, eg you click top left of screen
+ -= bubbles          boolean indicating if the event bubbles up through the dom, eg click bubbles up to parent ie true
+ -= cancelable       boolean indicating if the event default action can be prevented, eg form submit can be stopped ie true
+ -= defaultPrevented whether preventDefault() was called, eg you called preventDefault() ie true
+ -= timeStamp        the time(in ms) when the event was created, you click at 12:00:01:123 ie timestamp show that
+ -= preventDafault() cancels the event default behaviour eg stopping a form submission, eg stops link from navigating
+ -= stopPropagation()prevents the event from bubbling up the dom, eg stops click from reaching parent
+
+                                        
+                                         +++++++++++++++++++EVENT PROPAGATION++++++++++++++++++
+
 
 
 
