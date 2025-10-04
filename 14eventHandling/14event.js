@@ -26,3 +26,37 @@ a3.addEventListener('click',function(){
 a4.addEventListener('click',()=>{
     a2.style.backgroundColor = "white"
 })
+//event object
+const a5 = document.getElementById('mydiv2')
+a5.addEventListener('click', (event) => {
+    console.log(event)
+})
+
+console.log("features of event object++++++++++++++++++++++++++++++++++++++++++++++++")
+const button = document.getElementById('mybutton')
+const link = document.getElementById('mylink')
+// const span = document.getElementById('myspan')
+
+function logEventProperties(event){ //so here is a function designed to be the evnet handler like its a block of code that runs whenever the associated event occurs like in this is case it is click event and its accepts one argument which is the event object itself and object contains all the info about the event that just happend
+    console.log("---event properties---")
+    console.log('type:', event.type) //print the type of event that is occured like the type of user interaction like click, keydown etc
+    console.log('target:', event.target.tagName); //prints the element that originally triggered the event. this is crucial for event delegation where you have a single listener on a parent element but want to know which child was clicked
+    console.log('currentTarget:', event.currentTarget.tagName);//if the listener is on button then event.currentarget will always be the button element regardless of whether you clicked the button itself or the span inside it or any child inside of it
+    console.log('clientX:', event.clientX);//prints the horizontal coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page)
+    console.log('clientY:', event.clientY);//prints the vertical coordinate within the application's client area at which the event occurred (as opposed to the coordinate within the page)
+    console.log('bubble', event.bubble);//indicates whether the event bubbles up through the DOM or not without this property all events would behave the same way and we would not be able to determine their propagation behaviour
+    console.log('cancelable', event.cancelable);//it lets you know if a call to preventDefault() will have any effect on this event if an event is not cancelable then calling preventDefault() will do nothing
+    console.log('defaultPrevented', event.defaultPrevented);//a boolean value that indicates whether preventDefault() was called on this event
+    console.log('timeStamp', event.timeStamp);//it provides the time at which the event was created in milliseconds since the epoch this can be useful for measuring the time between events or for debugging purposes
+
+    event.stopPropagation() //A method that stops the event from bubbling up to parent elements.
+    //It gives you granular control over event flow. If you only want to handle an event on a child element and not its parents, you use this method.
+    console.log('stop propagation() was called');
+}
+button.addEventListener('click', logEventProperties) //here not used logEventProperties() because i just want it to remember the reference of the function to trigger when i the event click is happen on the button and if i used logEventProperties() then its mean calling the function immediately
+
+link.addEventListener('click', (e) => {
+    e.preventDefault() //A method that cancels the browser's default behavior for an event. for eg navigation through a link is default behaviour of ahref
+    logEventProperties(e)  //calling the function to log event properties
+    console.log('preventDefault() was called');
+});
