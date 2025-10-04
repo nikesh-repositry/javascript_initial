@@ -25,8 +25,19 @@
 
     <p>event handling using addEventListener</p>
     <div id="mydiv2" style="width: 150px; height:150px; border-radius: 50%; border: 20px solid black;"></div>
+    <p>click on the circle and see in the script console and see the information given by event object about the element</p>
     <button id="but1" style="margin-right: 80px;"> ON </button>
     <button id="but2"> OFF </button>
+
+    <p><strong>++++++++++now the features of event object eg start+++++++++++++</strong></p>
+    <!-- so here a simple container element div which serves as a parent for the button
+     and there is span nested inside the button used to demonstrate the difference between event.target and event.currentTarget 
+     and then a hyperlink which default behaviour is to navigate to the url specified in its href attribute-->
+    <div id="container">
+        <button id="mybutton">click this <span id="myspan">span</span>inside the button</button>
+        <a href="https://brave.com/" id="mylink">click me to see preventDefault</a>
+    </div>
+
     <script src="14event.js"></script>
 </body>
 </html>
