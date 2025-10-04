@@ -58,7 +58,7 @@ this object is then passed to the function that is designed to handle that event
  -= timeStamp        the time(in ms) when the event was created, you click at 12:00:01:123 ie timestamp show that
  -= preventDafault() cancels the event default behaviour eg stopping a form submission, eg stops link from navigating
  -= stopPropagation()prevents the event from bubbling up the dom, eg stops click from reaching parent
-
+🌟to understand properties so well watch out the js code of file of event
                                         
                                          +++++++++++++++++++EVENT PROPAGATION++++++++++++++++++
 event propagation also known as event flow/event bubbling and capturing
@@ -69,9 +69,19 @@ event propagation is crucial for
 =ui interaction:enabling behaviour like closing modals on outside clicks or form validation on nested inputs
 =debuggging:understanding why an event seems to leak to unintended elements.
 event propagation describes the way events travel through the dom after they are triggered. it consist of three phases:
-1.capturing phase also called trickling phase
+1.capturing phase also called trickling phase or downward phase
 2.target phase
-3.bubbling phase
+3.bubbling phase also called upward phase
+these phases ensure events can be intercepted and handled at multiple levels of the dom hierarchy.
+document → html → body → parent → child → target
+           ↓ Capturing
+           → Target
+           ↑ Bubbling
+                                                         1.capturing/trickling phase
+direction is top to down(from document to target)
+only triggered if addEventListerner uses {capture: true}
+intercept events before they reach the target
+
 
 
 
