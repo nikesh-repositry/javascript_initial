@@ -61,6 +61,18 @@ this object is then passed to the function that is designed to handle that event
 
                                         
                                          +++++++++++++++++++EVENT PROPAGATION++++++++++++++++++
+event propagation also known as event flow/event bubbling and capturing
+event propagation describes the order in which an event moves through the dom when a user interacts with a webpage.
+when an event is fired on a target element it does not just stop there it propagates through related elements in a predictable path. this allow parent, child and sibling elements to respond to the event without needing to attach handlers directly to the target.
+event propagation is crucial for 
+=efficient event handling:attach listeners to a common ancestor to handle events from many descendants
+=ui interaction:enabling behaviour like closing modals on outside clicks or form validation on nested inputs
+=debuggging:understanding why an event seems to leak to unintended elements.
+event propagation describes the way events travel through the dom after they are triggered. it consist of three phases:
+1.capturing phase also called trickling phase
+2.target phase
+3.bubbling phase
+
 
 
 
