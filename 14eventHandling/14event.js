@@ -16,7 +16,7 @@ a1.onmouseout=()=>{
     a1.style.backgroundColor = "fuchsia"
 }
 
-//event hagdling using addEventListener
+//event handling using addEventListener
 const a2 = document.getElementById('mydiv2')
 const a3 = document.getElementById('but1')
 const a4 = document.getElementById('but2')
@@ -60,3 +60,35 @@ link.addEventListener('click', (e) => {
     logEventProperties(e)  //calling the function to log event properties
     console.log('preventDefault() was called');
 });
+
+
+console.log("EVENT PROPAGATION++++++++++++++++++++++++++++++++++")
+let grandparent= document.querySelector('.grand-parent')
+let parent= document.querySelector('.parent')
+let child= document.querySelector('.child') 
+//below is code for bubbling phase
+grandparent.addEventListener('mouseout',()=>{
+    alert('grandparent mouseout bubbling')
+    console.log('grandparent mouseout bubbling')
+})
+parent.addEventListener('mouseout',()=>{
+    alert('parent mouseout bubbling')
+    console.log('parent mouseout bubbling')
+})
+child.addEventListener('mouseout',()=>{
+    alert('child mouseout bubbling')
+    console.log('child mouseout bubbling')
+})
+//below is code for capturing phase
+grandparent.addEventListener('dblclick',()=>{
+    alert('grandparent double clicked capturing')
+    console.log('grandparent double clicked capturing')
+},true)
+parent.addEventListener('dblclick',()=>{
+    alert('parent double clicked capturing')
+    console.log('parent double clicked capturing')
+},true)          
+child.addEventListener('dblclick',()=>{
+    alert('child double clicked capturing')
+    console.log('child double clicked capturing')
+},true)
