@@ -78,9 +78,23 @@ document → html → body → parent → child → target
            → Target
            ↑ Bubbling
                                                          1.capturing/trickling phase
+here the event trickles down from the outermost ancestor (dom root) toward the target element, visiting each ancestor in the hirerchy. this allow outer elements to capture the event before it reaches the target.
 direction is top to down(from document to target)
 only triggered if addEventListerner uses {capture: true}
 intercept events before they reach the target
+so if event listerner are registered with addEventListener(event, handler, true), the event will be caught during this phase.
+but here the third parameter is true which actually is capture: true which role in addEventListerner() is to call changes the event flow from bubbling to capturing and by default capture: false until manually changed it to true.
+                                                                2.target phase
+this is the phase where the event has reached the actual element that was interacted with (the target element)
+the event.target property points here
+all phases overlap here if the target has handlers
+both capturing and bubbling listners can affect this phase depending on how they are registered
+                                                               3.bubbling phase
+after the target element is triggered, the event then bubbles up (travels back upward) through the DOM tree, from the target parent->ancestor->document
+direction is down to up(from target to root/document)
+if event listerner are registered without the true parameter (addEventListener(event, handler, false) or default), they work during this phase.
+it is very useful  event delegation (attaching one listener on a parent instead of multiple children)
+
 
 
 
