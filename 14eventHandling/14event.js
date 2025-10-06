@@ -92,3 +92,44 @@ child.addEventListener('dblclick',()=>{
     alert('child double clicked capturing')
     console.log('child double clicked capturing')
 },true)
+
+console.log("new concepts examples+++++++++++")
+const a6 = document.getElementById('mydiv3')
+const a7 = document.getElementById('mybut1')
+
+a6.addEventListener('click', (event) => {
+    alert('parent div clicked')
+    console.log('parent div clicked')
+    console.log(event)
+})
+a7.addEventListener('click', (event) => {
+    event.stopPropagation() //so here when i click the button the event will not propagate to its parent div and only the button click event will be triggered
+    alert('child button clicked event 1')
+    console.log('child button clicked event 1')
+    console.log(event)
+})
+a7.addEventListener('click', (event) => {
+    alert('child button clicked event 2')
+    console.log('child button clicked event 2')
+    console.log(event)
+})
+
+const a8 = document.getElementById('mydiv4')
+const a9 = document.getElementById('mybut2')
+
+a8.addEventListener('dblclick', (event) => {
+    alert('parent div clicked')
+    console.log('parent div clicked')
+    console.log(event)
+})
+a9.addEventListener('dblclick', (event) => {
+    event.stopImmediatePropagation() //so here when i click the button the event will not propagate to its parent div and only the button click event will be triggered
+    alert('child button clicked event 1')
+    console.log('child button clicked event 1')
+    console.log(event)
+})
+a9.addEventListener('dblclick', (event) => {
+    alert('child button clicked event 2')
+    console.log('child button clicked event 2')
+    console.log(event)
+})
