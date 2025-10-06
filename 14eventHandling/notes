@@ -95,7 +95,24 @@ direction is down to up(from target to root/document)
 if event listerner are registered without the true parameter (addEventListener(event, handler, false) or default), they work during this phase.
 it is very useful  event delegation (attaching one listener on a parent instead of multiple children)
 
+difference between::==
+event.target : identifying which child element was clicked or interacted with.
+event.currentTarget : always points to the element where the listener is attached, regardless of where the event originated or which element triggered it.
+this : referes to the context in which the function is executed. inside an event listener, this points to the element to which the event listener was attached(the element where addEventListerner was used)
 
+how to stop bubbling and capturing:==:
+stopPropagation()=
+ its purpose is to prevents the event from bubbling up or capturing down the DoM tree but does not stop other listener on the same element
+ eg. imagine you have a button inside a box. when you click the button you want only the button
+     click action to happen. you dont want the box click action to happen as well. using this mehtod
+     on the button click event will stop the event from bubbling up to the box.
+ but but but stopPropagation() only stops the bubbling and capturing to the next element but if the there is a element with more than one eventlisterer attached to it then stopPropagation() not stop those eventlistener
+
+stopImmediatePropagation()=
+ this method does everything stopPropagation() does but with one extra step: it also stops any other event listerners on the same element from running.
+ eg. let say you have the same button but you have two separate click actions attached to it. if 
+     you use stopImmediatePropagation() on the first click action, the event will not only stop 
+     bubbling up to the box, but it will also stop the second click action on the button from ever running.
 
 
 
