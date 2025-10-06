@@ -133,3 +133,30 @@ a9.addEventListener('dblclick', (event) => {
     console.log('child button clicked event 2')
     console.log(event)
 })
+
+console.log("EVENT PROPAGATION++++++++++++++++++++++++++++++++++")
+//prints the element that originally triggered the event. this is crucial for event delegation where you have a single listener on a parent element but want to know which child was clicked
+document.getElementById('menu').addEventListener('click', (e)=>{
+    const target = e.target; // Get the clicked element
+    if(target.tagName === 'LI'){
+        switch(target.dataset.action){
+            case 'home':
+                alert('home clicked')
+                console.log('home clicked')
+                break;
+            case 'about':
+                alert('about clicked')
+                console.log('about clicked')
+                break;
+            case 'contact':
+                alert('contact clicked')
+                console.log('contact clicked')
+                break;
+            default:
+                console.log('click a list item, but no specific action is defined')
+                alert("read the console developer tools")   
+        }
+    }
+
+})
+
