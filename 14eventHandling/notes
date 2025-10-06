@@ -114,7 +114,21 @@ stopImmediatePropagation()=
      you use stopImmediatePropagation() on the first click action, the event will not only stop 
      bubbling up to the box, but it will also stop the second click action on the button from ever running.
 
-
+                                                                         ==EVENT DELEGATION==
+event delegation is a design pattern in javascript for handling events. instead of adding a separate event listener to every single element on a web page, you add just one event listener to a common parent element.
+when a child element is clicked the event bubbles up to the parent the parent event listener then identifies which child was clicked and handles the event accordingly this is much more efficient in case of long list of event handling
+                      how it works:
+attach one listener
+event bubbles up
+identify the target
+handle the event
+                      why it works:
+js events bubbles up the dom tree. so if a child element is clicked the event travels up to its parent, grandparent etc you can intercept it at any level.
+                      why use it:
+better performance
+dynamic element
+cleaner code
+see the code for better understanding in js html event file
 
 
 
