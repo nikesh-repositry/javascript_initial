@@ -58,7 +58,7 @@ this object is then passed to the function that is designed to handle that event
  -= timeStamp        the time(in ms) when the event was created, you click at 12:00:01:123 ie timestamp show that
  -= preventDafault() cancels the event default behaviour eg stopping a form submission, eg stops link from navigating
  -= stopPropagation()prevents the event from bubbling up the dom, eg stops click from reaching parent
-🌟to understand properties so well watch out the js code of file of event
+🌟to understand properties so well watch out the js code of file of event. 
                                         
                                          +++++++++++++++++++EVENT PROPAGATION++++++++++++++++++
 event propagation also known as event flow/event bubbling and capturing
