@@ -95,7 +95,7 @@ direction is down to up(from target to root/document)
 if event listerner are registered without the true parameter (addEventListener(event, handler, false) or default), they work during this phase.
 it is very useful  event delegation (attaching one listener on a parent instead of multiple children)
 
-difference between::==
+difference between::== 
 event.target : identifying which child element was clicked or interacted with.
 event.currentTarget : always points to the element where the listener is attached, regardless of where the event originated or which element triggered it.
 this : referes to the context in which the function is executed. inside an event listener, this points to the element to which the event listener was attached(the element where addEventListerner was used)
