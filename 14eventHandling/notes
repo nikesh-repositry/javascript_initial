@@ -124,7 +124,7 @@ identify the target
 handle the event
                       why it works:
 js events bubbles up the dom tree. so if a child element is clicked the event travels up to its parent, grandparent etc you can intercept it at any level.
-                      why use it:
+                       why use it:
 better performance
 dynamic element
 cleaner code
