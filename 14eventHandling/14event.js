@@ -138,7 +138,7 @@ console.log("EVENT PROPAGATION++++++++++++++++++++++++++++++++++")
 //prints the element that originally triggered the event. this is crucial for event delegation where you have a single listener on a parent element but want to know which child was clicked
 document.getElementById('menu').addEventListener('click', (e)=>{
     const target = e.target; // Get the clicked element
-    if(target.tagName === 'LI'){
+    if(target.tagName === 'LI'){   //this line ensures that only clicking the list item response and prevent the parent div to react to the user interaction 
         switch(target.dataset.action){
             case 'home':
                 alert('home clicked')
