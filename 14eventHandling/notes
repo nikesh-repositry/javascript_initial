@@ -130,6 +130,8 @@ dynamic element
 cleaner code
 see the code for better understanding in js html event file
 
+so at all event delegation is used to reduce overhead by managing event listener in the elements as just adding the event listener to the parent and accessing or performing actions through this listerner to the child elements of the parent.
+
 
 
 
