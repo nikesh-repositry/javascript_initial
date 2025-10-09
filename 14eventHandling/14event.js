@@ -139,7 +139,7 @@ console.log("EVENT PROPAGATION++++++++++++++++++++++++++++++++++")
 document.getElementById('menu').addEventListener('click', (e)=>{
     const target = e.target; // Get the clicked element
     if(target.tagName === 'LI'){   //this line ensures that only clicking the list item response and prevent the parent div to react to the user interaction 
-        switch(target.dataset.action){
+        switch(target.dataset.action){ //this(dataset action) attributes allow you to store custom data on HTML elements. These attributes are ignored by the browser but accessible via JavaScript
             case 'home':
                 alert('home clicked')
                 console.log('home clicked')
