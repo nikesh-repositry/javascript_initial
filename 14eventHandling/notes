@@ -60,7 +60,7 @@ this object is then passed to the function that is designed to handle that event
  -= stopPropagation()prevents the event from bubbling up the dom, eg stops click from reaching parent
 🌟to understand properties so well watch out the js code of file of event. 
                                         
-                                         +++++++++++++++++++EVENT PROPAGATION++++++++++++++++++
+                                             +++++++++++++++++++EVENT PROPAGATION++++++++++++++++++
 event propagation also known as event flow/event bubbling and capturing
 event propagation describes the order in which an event moves through the dom when a user interacts with a webpage.
 when an event is fired on a target element it does not just stop there it propagates through related elements in a predictable path. this allow parent, child and sibling elements to respond to the event without needing to attach handlers directly to the target.
