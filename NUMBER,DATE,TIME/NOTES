@@ -1,1 +1,38 @@
+================================================NUMBERS============================================
+=> unlike many other languages js has only one number type:Number
+=> which means no separate types for intergers or floats remember it
+=> so in js numbers represent both integer and floating point values
+=> numbers is technically  a constructor function(built in function) in js
+=> numbers are a primitive data type
+
+Characteristics:
+>all numbers in js are stored as 64 bit floating point values as per IEEE 754 standard
+>(approximately −9,007,199,254,740,991 to +9,007,199,254,740,991) range
+>no distinction between integers and floats, all are floating point
+>special values NaN(not a number), +infinity, -infinity
+
+Number representation like decimal, hexadecimal, binary, octal, scientific notation
+
+Types of numberic values:
+1. interger = whole numbers like 10
+2. floating point = decimal numbers like 10.5
+3. infinity = larger than any other number like infinity, -infinity
+4. NaN = result of invalid numeric opertions like 0/0, parseInt("abc")
+
+There are two ways to use numbers:
+1.Primitive type
+  let num = 100; and like this for other number representation
+2.Number object (constuctor type)
+  syntax: new Number(value) here any value to convert to number (string, boolean, etc) default to 0.
+  new Number() creats an object, not a primitive number.AND this can lead to confusing bugs and unexpected hehavior.
+  let numobj = new Number(100);
+Note::avoid new Number() for primitives; use literals for better performance.
+
+
+
+
+
+
+
+
 
