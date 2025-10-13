@@ -64,7 +64,19 @@ note:: all string returning methods throw rangeError if digit params are invalid
 
 Type Coercion and conversion:
 implicit coercion: JS auto converts in operation 
-explicit coercion: 
+explicit coercion: Number("123") converts string into number
+                 : Number(true) boolean to number
+                 : Number(false) boolean to number
+                 : Number(null) converts to 0
+      edge cases
+                 : Number("abc") invalid -> NaN
+                 : Number('') -> 0
+                 : Number(undefined) -> NaN
+                 : 0/0->NaN
+                 : 1/0->Infinity
+                 : NaN !== NaN    it is not equal to itself
+                 : 0==false is true so avoid == and use ===
+
 
 
 
