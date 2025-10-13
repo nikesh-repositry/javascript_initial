@@ -40,6 +40,12 @@ Properties of Numbers, Static properties(constants) : these are read only proper
 
 Methods of Numbers, Static methods(numbers.method) : these are utility functions on numbers for type checking and conversion.
 1. Number.isFinite(value) checks if value  is a finite number and not inifinity or NaN
+2. Number.isInteger(value) checks if value is an integer
+3. Number.isNaN(value) checks if value is NaN(strict)
+4. Number.isSafeInteger(value) checks if integer is within safe range
+5. Number.parseInt(string) converts a string to an integer
+6. Number.parseFloat(string) converts a string to a floating point number
+remember Number.parseInt and Number.parseFloat are the same as global parseInt() and parseFloat()
 
 
 
