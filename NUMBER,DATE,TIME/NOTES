@@ -28,6 +28,19 @@ There are two ways to use numbers:
   let numobj = new Number(100);
 Note::avoid new Number() for primitives; use literals for better performance.
 
+Properties of Numbers, Static properties(constants) : these are read only properties on Number itself.
+1. Number.MAX_VALUE = largest representable number  1.7976931348623157e+308
+2. Number.MIN_VALUE = smallest positive representable number  5e-324
+3. Number.POSITIVE_INFINITY = positive infinity
+4. Number.NEGATIVE_INFINITY = negative infinity
+5. Number.NaN = non a number constant
+6. Number.MAX_SAFE_INTEGER = maximum safe integer  9007199254740991
+7. Number.MIN_SAFE_INTEGER = minimum safe integer  -9007199254740991
+8. Number.EPSILON = smallest interval between two representable numbers around
+
+Methods of Numbers, Static methods(numbers.method) : these are utility functions on numbers for type checking and conversion.
+1. Number.isFinite(value) checks if value  is a finite number and not inifinity or NaN
+
 
 
 
