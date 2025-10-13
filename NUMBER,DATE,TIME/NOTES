@@ -41,11 +41,31 @@ Properties of Numbers, Static properties(constants) : these are read only proper
 Methods of Numbers, Static methods(numbers.method) : these are utility functions on numbers for type checking and conversion.
 1. Number.isFinite(value) checks if value  is a finite number and not inifinity or NaN
 2. Number.isInteger(value) checks if value is an integer
-3. Number.isNaN(value) checks if value is NaN(strict)
+3. Number.isNaN(value) checks if value is NaN(strict means it does not coerce)
 4. Number.isSafeInteger(value) checks if integer is within safe range
 5. Number.parseInt(string) converts a string to an integer
 6. Number.parseFloat(string) converts a string to a floating point number
 remember Number.parseInt and Number.parseFloat are the same as global parseInt() and parseFloat()
+
+Instance properties:
+constructor: reference the Number constructor function 
+ == every js object has a constructor property that reference the function that created the instance prototype
+[[Prototype]]: points to Number.prototype(internal; not directly accessible)
+
+numberInstance methods/prototype methods: these are used with number objects or literals 
+1. toExponential(fractionDigits?) = returns string in exponential notation |return type is string
+2. toFixed(fractionDigits?) = returns string with fixed decimals and rounded if needed |return type is string
+3. toPrecision(precision?) = returns string with specified significant digits |return type is string
+4. toLocaleString(locales?,options?) = returns locale specific string |return type is string
+5. toString(radix?) = returns string representation in base 2-36. default 10 |return type is string
+6. valueOf() = returns the primitive number value |return type is Number
+note:: all string returning methods throw rangeError if digit params are invalid
+       toLocalString is useful for internationalization
+
+Type Coercion and conversion:
+implicit coercion: JS auto converts in operation 
+explicit coercion: 
+
 
 
 
