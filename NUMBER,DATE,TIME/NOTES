@@ -27,6 +27,8 @@ There are two ways to use numbers:
   new Number() creats an object, not a primitive number.AND this can lead to confusing bugs and unexpected hehavior.
   let numobj = new Number(100);
 Note::avoid new Number() for primitives; use literals for better performance.
+3.Number function 
+  Syntax: let num = Number(123);
 
 Properties of Numbers, Static properties(constants) : these are read only properties on Number itself.
 1. Number.MAX_VALUE = largest representable number  1.7976931348623157e+308
