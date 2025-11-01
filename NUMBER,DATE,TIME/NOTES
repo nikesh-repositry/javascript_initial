@@ -5,7 +5,7 @@
 => numbers is technically  a constructor function(built in function) in js
 => numbers are a primitive data type
 
-Characteristics:
+Characteristics: 
 >all numbers in js are stored as 64 bit floating point values as per IEEE 754 standard
 >(approximately −9,007,199,254,740,991 to +9,007,199,254,740,991) range
 >no distinction between integers and floats, all are floating point
