@@ -1,4 +1,4 @@
-================================================NUMBERS============================================
+================================================NUMBERS=============================================
 => unlike many other languages js has only one number type:Number
 => which means no separate types for intergers or floats remember it
 => so in js numbers represent both integer and floating point values
