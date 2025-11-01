@@ -64,7 +64,7 @@ numberInstance methods/prototype methods: these are used with number objects or 
 note:: all string returning methods throw rangeError if digit params are invalid
        toLocalString is useful for internationalization
 
-Type Coercion and conversion:
+Type Coercion and conversion: 
 implicit coercion: JS auto converts in operation 
 explicit coercion: Number("123") converts string into number
                  : Number(true) boolean to number
