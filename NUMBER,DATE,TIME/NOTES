@@ -13,7 +13,7 @@ Characteristics:
 
 Number representation like decimal, hexadecimal, binary, octal, scientific notation
 
-Types of numberic values:
+Types of numberic values: 
 1. interger = whole numbers like 10
 2. floating point = decimal numbers like 10.5
 3. infinity = larger than any other number like infinity, -infinity
