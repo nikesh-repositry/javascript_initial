@@ -96,7 +96,7 @@ async/await (syntactic sugar over Promises)
 ==makes async code look synchronous
 use  it when working with I/O, api calls, file systems or use triggered async operations
 avoid when dealing with simple sequential logic due to unnecessary overhead
-
+ 
 
 SUMMATIONS
 | Scenario                      | Best Paradigm            |
