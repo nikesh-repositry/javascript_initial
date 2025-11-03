@@ -80,7 +80,7 @@ async/await (syntactic sugar over Promises)
 =functions (Callbacks or listeners) are triggered when specific events occur
 =use it when building interactive UIs, servers or iot systems
 =avoid when logic does not rely on external triggers
-
+ 
 
 5.ASYNCHRONOUS PROGRAMMING (cross paradigm) =
 =handles non blocking operations
