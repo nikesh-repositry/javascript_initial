@@ -1,1 +1,82 @@
-DEFINATION=
+DEFINATION= in short FP is about using pure function and avoiding shared effect or side effects.
+=shared state means multiple parts of the program are accessing or modiifying the same data like a common object or global variable
+=side effects is anything a function does besides returing a value like changing the dom, logging to console, modifying a variable outside its scope, and more others.
+=pure function is always returns the same output for the same input and causes no side effects.
+=pure function are treated as first class citizen which means they can be assigned to variables, passed as arguments and returned from other functions.
+=FP focuses on what to do not how to do.
+=FP follow immutability that is data does not change rather you create a new version of it
+=FP treats functions as values that it can be passed around like numbers or strings
+
+now there are separate concepts about FP to be learned about 
+1.pure function
+2.immutability
+3.declarative
+4.avoid shared state
+5.avoid side effects
+6.reuse of compose logic
+7.don not iterate
+8.loose coupling
+9.first class  
+10.higher order functions
+
+1.pure function:::
+=a funtion is called pure if it always gives the same output for the same input  
+=it does not cause any side effects like changing external variables or the way a webpage looks.
+=and impure function is that function which returns different output for the same input over time and or causes side effects
+
+2.immutability:::
+=in FP original data is read only and instead of editing you create fresh copies and for that js helps with const, spread operator and methods like map
+
+3.declarative code:::
+=this means that you just describe what should be done not how to get it done.
+
+4.avoid shared state:::
+=sharing mutable state means different parts of your programs can access and change the same piece of data
+ this can lead to hard to find bugs in async and parallel systems
+
+5.avoid side effects:::
+=a side effect is anything that a function does beyond just returning a value.
+=this could include api calls, dom manipulation etc
+
+6.reuse or compose logic:::
+=this refers to build small and focused functions that can be easily combined to create more complex operation
+ like building small reusable  functions and composing them together.
+
+7.do not iterate:::
+=in FP its often preferred to avoid traditional loops like for , while etc instead use methods like map, filter, reduce which are more declarative.
+
+8.loose coupling:::
+=coupling refers to how much one part of the code dependent on another
+=loose coupling means that functions and modules are as independent as possible and reducing reliance on each others
+
+9.first class function:::
+=in js functions ae first class citizens which means you can assign them to variables, pass them as arguments, return them from other function.
+
+10. higher order function:::
+=a higher order function is a function that does atleast one (takes another function as a argument) or (returns a function)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
