@@ -18,6 +18,13 @@ now there are separate concepts about FP to be learned about
 8.loose coupling
 9.first class  
 10.higher order functions
+11.composition of function
+12.avoiding mutation with spread and rest
+13.anonymous and arrow function
+14.currying and partial function
+15.recursion
+16.closure
+17.built in methods
 
 1.pure function:::
 =a funtion is called pure if it always gives the same output for the same input  
@@ -26,6 +33,7 @@ now there are separate concepts about FP to be learned about
 
 2.immutability:::
 =in FP original data is read only and instead of editing you create fresh copies and for that js helps with const, spread operator and methods like map
+=js can handle immutability by using const, object.freeze(), spread syntax for arrays and objects
 
 3.declarative code:::
 =this means that you just describe what should be done not how to get it done.
@@ -55,8 +63,34 @@ now there are separate concepts about FP to be learned about
 10. higher order function:::
 =a higher order function is a function that does atleast one (takes another function as a argument) or (returns a function)
 
+11.compostition of function:::
+=composition combines small functions into bigger and the complex one.
 
+12.avoiding mutations with spread and rest:::
+=spread operator helps you copy arrays or objects and updates them without mutating the original
+=rest operator collects the rest of the values when destructuring
 
+13.anonymous and arrow function:::
+=an anonymous function is a function without a name
+=arrow functions are a shorted syntax for writing anonymous functions
+
+14.currying and partial application:::
+=currying transforms a function with multiple arguments into a sequence of functions each taking a single arguments
+=partial application means fixing a few arguments of a function and returning a new function that takes the rest
+
+15.recursion:::
+=it means function calls itself to solve a smaller sub problem 
+
+16.closure:::
+=a closure is when a function remembers variables from its outer scope even after the outer function finishes
+
+17.built in methods:::
+=js arrays provide several functional methods that do not mutate the original array and these are heavily used in FP
+a) map() = used to tranform each element in an array
+b) filter() = used to filter out elements based on a condition
+c) reduce() = used to combine all elements into a single value
+d) forEach() = used to perform an action for each element (no pure often used for side effects)
+e) find() = finds the first element that matches a condition
 
 
 
