@@ -8,23 +8,23 @@ DEFINATION= in short FP is about using pure function and avoiding shared effect 
 =FP treats functions as values that it can be passed around like numbers or strings
 
 now there are separate concepts about FP to be learned about 
-1.pure function
-2.immutability
-3.declarative
-4.avoid shared state
-5.avoid side effects
-6.reuse of compose logic
-7.don not iterate
-8.loose coupling
-9.first class  
-10.higher order functions
-11.composition of function
-12.avoiding mutation with spread and rest
-13.anonymous and arrow function
-14.currying and partial function
-15.recursion
-16.closure
-17.built in methods
+1.pure function==================================same input same output
+2.immutability===================================no modification
+3.declarative====================================focus on what not how
+4.avoid shared state=============================no globals use
+5.avoid side effects=============================no external changes
+6.reuse of compose logic=========================combine small funcs
+7.don not iterate================================avoid loops
+8.loose coupling=================================independent functions
+9.first class====================================treat func as value
+10.higher order functions========================take/return func
+11.composition of function=======================combine func
+12.avoiding mutation with spread and rest========avoid mutation
+13.anonymous and arrow function==================short syntax
+14.currying and partial function=================chain arguments
+15.recursion=====================================self call
+16.closure=======================================access outer scope
+17.built in methods==============================functional utilites
 
 1.pure function:::
 =a funtion is called pure if it always gives the same output for the same input  
