@@ -1,1 +1,12 @@
-
+1. what is functional pipelines in js?
+   a pipeline is a sequence of functions applied one after another. instead of nesting functions or writing
+   imperative code you pass data through a series of pure functions.
+   improves readability
+   encourages modular and reusable code
+   aligns with functional programming principle
+   it can be work - manual chaining
+                  - pipe() = left to right func chaining
+                  - compose() = right to left func chaining
+   real world use case - data tranformation
+                       - middleware chaining
+                       - RxJS streams
