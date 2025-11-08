@@ -158,3 +158,18 @@ console.log('FIRST CLASS FUNCTION')
 const a = (name)=>{console.log(`hello ${name}`)}
 function b(fn,naam){return fn(naam)}
 b(a,"nikesh") //in this program the function is saved in a variable and func is passed and returned also
+
+
+
+
+//10.HIGHER ORDER FUNCTION
+console.log('HIGHER ORDER FUNCTION')
+//build a higher order mapper that accepts any transform function
+const aa = (arr,fun)=>{return arr.map(fun)};
+// const aa = (arr, fun) => arr.map(fun);  here no return is written because no use of {} braces if it use then must to write the word return 
+const ab = aa([2,6],x=>x*x)
+console.log(ab)
+
+
+
+
