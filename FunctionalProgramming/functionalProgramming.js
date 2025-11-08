@@ -173,3 +173,13 @@ console.log(ab)
 
 
 
+//11.FUNCTION COMPOSITION
+console.log('FUNCTION COMPOSITION')
+//find the double of the square of a digit
+// const b3 = (f,g)=>x=>f(g(x));
+const b1 = x=>x*2;
+const b2 = x=>x*x;
+const b3 = (f,g)=>x=>f(g(x));
+const b4 = (b3(b2,b1))
+const b5 = (b4(2))
+console.log(b5)
