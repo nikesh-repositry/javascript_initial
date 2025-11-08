@@ -183,3 +183,15 @@ const b3 = (f,g)=>x=>f(g(x));
 const b4 = (b3(b2,b1))
 const b5 = (b4(2))
 console.log(b5)
+
+
+
+
+//12.AVOID MUTATION WITH SPREAD AND REST OPERATOR
+console.log("AVOID MUTATION WITH SPREAD AND REST OPERATOR")
+//add new property to object without changing original
+const user = { name: "Nikesh", age: 21 };
+const updated = { ...user, age: 22 };
+
+console.log(user); // {name:"Nikesh", age:21}
+console.log(updated); // {name:"Nikesh", age:22}
