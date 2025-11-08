@@ -154,4 +154,7 @@ send(user1,sendmail)
 
 //9.FIRST CLASS FUNCTION
 console.log('FIRST CLASS FUNCTION')
-//
+//a program where a function can be stored in variables, passed or returned
+const a = (name)=>{console.log(`hello ${name}`)}
+function b(fn,naam){return fn(naam)}
+b(a,"nikesh") //in this program the function is saved in a variable and func is passed and returned also
