@@ -24,7 +24,7 @@ now there are separate concepts about FP to be learned about
 14.currying and partial function=================chain arguments
 15.recursion=====================================self call
 16.closure=======================================access outer scope
-17.built in methods==============================functional utilites
+17.built in methods*==============================functional utilites
 
 1.pure function:::
 =a funtion is called pure if it always gives the same output for the same input  
@@ -91,6 +91,29 @@ b) filter() = used to filter out elements based on a condition
 c) reduce() = used to combine all elements into a single value
 d) forEach() = used to perform an action for each element (no pure often used for side effects)
 e) find() = finds the first element that matches a condition
+
+a)map() 
+=the map method creates a new array by taking every element from an old array and applying a transformation function to it.
+=it is like running each item through a factory machine
+=it returns a new array
+=the new array always have the same length as the original array
+=it does not mutate the original array
+=it is used when you want to tranform data
+=syntax of map for name function and arrow function is slightly different 
+=the map method takes three parameters inside 
+ 1. currentValue = the current value which in in process     REQUIRED to write
+ 2. index = the index of the current value    OPTIONAL to write
+ 3. array = the original array                OPTIONAL to write
+=syntax
+array.map((currentValue, index, array) => {       //syntax of map in arrow func
+  // transformation logic
+  return newValue;
+});
+array.map(function(currentValue, index, array) {   //syntax of map in normal named func
+  // transformation logic
+  return newValue;
+});
+
 
 
 
