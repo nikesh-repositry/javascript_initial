@@ -195,3 +195,24 @@ const updated = { ...user, age: 22 };
 
 console.log(user); // {name:"Nikesh", age:21}
 console.log(updated); // {name:"Nikesh", age:22}
+
+
+
+
+//17.BUILT IN FUNCITONS
+//1. .map() method
+//write a program to double the elements of a array
+//using named function
+const arr9 = [1,2,3,4];
+const a13 = arr9.map(function(currentvalue, index, array){
+    return `${currentvalue} currentvalue ${index} index ${array} array`
+})
+console.log(a13);
+//using arrow function
+const a14 = arr9.map((currentvalue, index, array)=>{
+    return `${currentvalue} currentvalue ${index} index ${array} array`
+})
+console.log(a14)
+//arrow function short code most practiced way
+const a15 = arr9.map(i=>i*2) //if you add {} outside of i*2 then you have to write the word return otherwise this is the way
+console.log(a15)
