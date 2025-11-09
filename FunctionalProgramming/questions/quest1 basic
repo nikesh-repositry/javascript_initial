@@ -1,1 +1,9 @@
+1.What is a pure function, and why is it useful in UI rendering?
+== a pure function in programming conducts deterministic behavior(always returns the same output/result for the given input) and no side effects(does not modify external variables, state or data structure outside its scope)
+   it helps in ui rendering because
+   predictability: pure components render the same output for the same props and state, making debugging and testing much easier.
+   performance optimization: react can efficiently re render only the components that change 
+   pure func are easier to reason about, refactor and reuse
+   since pure func don not mutate external state they help prevent hard to track bugs caused by unintended side effects
+
 
