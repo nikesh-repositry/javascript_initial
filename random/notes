@@ -1,0 +1,1 @@
+document.write = prints the script js written in .html into the localhost screen
